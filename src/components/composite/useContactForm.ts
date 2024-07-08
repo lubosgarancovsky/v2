@@ -12,10 +12,10 @@ export const useContactForm = (formRef: React.RefObject<HTMLFormElement>) => {
       setState('loading');
       try {
         await emailjs.sendForm(
-          '--secret--',
-          '--secret--',
+          import.meta.env.VITE_EMAIL_SERVICE_ID,
+          import.meta.env.VITE_EMAIL_TEMPLATE_ID,
           formRef.current,
-          '--secret--'
+          import.meta.env.VITE_EMAIL_PUBLIC_KEY
         );
       } catch (_) {
         setState('error');
