@@ -21,7 +21,7 @@ import NotesThumbanil from '../assets/images/notes - thumbnail.webp';
 import SkitLogo from '../assets/images/skit - logo.png';
 import { Project } from '../types';
 
-function App() {
+function Homepage() {
   const projects: Project[] = [
     {
       img: PathfinderThumbanil,
@@ -176,4 +176,4 @@ function App() {
   );
 }
 
-export default App;
+export default Homepage;

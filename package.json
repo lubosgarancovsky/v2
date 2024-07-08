@@ -1,8 +1,9 @@
 {
-  "name": "web_react_v2",
+  "name": "v2",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://lubosgarancovsky.github.io/v2/",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
