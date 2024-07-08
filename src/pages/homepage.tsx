@@ -87,7 +87,7 @@ function App() {
       <Section title="Pinned projects">
         <div className="grid grid-cols-1 tb2:grid-cols-2 gap-12 opaque-list">
           <Card
-            href="/ksdr"
+            href="/v2/ksdr"
             title="KSDR"
             description="Platform for viewing and sharing official documents"
           >
@@ -96,7 +96,7 @@ function App() {
             </div>
           </Card>
           <Card
-            href="/moje-slovensko"
+            href="/v2/moje-slovensko"
             title="Moje Slovensko"
             description="Personal zone of a citizen"
           >
@@ -105,7 +105,7 @@ function App() {
             </div>
           </Card>
           <Card
-            href="/aurora"
+            href="/v2/aurora"
             title="Aurora"
             description="Project managment application"
           >

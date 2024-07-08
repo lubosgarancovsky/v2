@@ -7,21 +7,23 @@ import AuroraPage from './pages/aurora.tsx';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css';
 
+const base = '/v2';
+
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: base,
     element: <Homepage />
   },
   {
-    path: '/ksdr',
+    path: base + '/ksdr',
     element: <KsdrPage />
   },
   {
-    path: '/moje-slovensko',
+    path: base + '/moje-slovensko',
     element: <MojePage />
   },
   {
-    path: '/aurora',
+    path: base + '/aurora',
     element: <AuroraPage />
   }
 ]);

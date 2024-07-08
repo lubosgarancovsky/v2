@@ -8,7 +8,7 @@ function MojePage() {
   return (
     <Layout>
       <div className="flex justify-between items-center">
-        <ArrowLink href="/">Back</ArrowLink>
+        <ArrowLink href="/v2/">Back</ArrowLink>
 
         <span className="text-foreground-100">2024</span>
       </div>
@@ -59,8 +59,8 @@ function MojePage() {
           <span className="text-foreground-100">Next</span>
         </div>
         <div className="flex justify-between items-center">
-          <ArrowLink href="/ksdr">KSDR</ArrowLink>
-          <ArrowLink href="/aurora" arrowPosition="right">
+          <ArrowLink href="/v2/ksdr">KSDR</ArrowLink>
+          <ArrowLink href="/v2/aurora" arrowPosition="right">
             Aurora
           </ArrowLink>
         </div>

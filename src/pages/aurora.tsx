@@ -17,7 +17,7 @@ function AuroraPage() {
   return (
     <Layout>
       <div className="flex justify-between items-center">
-        <ArrowLink href="/">Back</ArrowLink>
+        <ArrowLink href="/v2/">Back</ArrowLink>
 
         <span className="text-foreground-100">2024</span>
       </div>
@@ -105,8 +105,8 @@ function AuroraPage() {
           <span className="text-foreground-100">Next</span>
         </div>
         <div className="flex justify-between items-center">
-          <ArrowLink href="/moje-slovensko">Moje Slovensko</ArrowLink>
-          <ArrowLink href="/ksdr" arrowPosition="right">
+          <ArrowLink href="/v2/moje-slovensko">Moje Slovensko</ArrowLink>
+          <ArrowLink href="/v2/ksdr" arrowPosition="right">
             KSDR
           </ArrowLink>
         </div>

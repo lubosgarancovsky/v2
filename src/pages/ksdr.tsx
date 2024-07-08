@@ -7,7 +7,7 @@ function KsdrPage() {
   return (
     <Layout>
       <div className="flex justify-between items-center">
-        <ArrowLink href="/">Back</ArrowLink>
+        <ArrowLink href="/v2/">Back</ArrowLink>
 
         <span className="text-foreground-100">2024</span>
       </div>
@@ -58,8 +58,8 @@ function KsdrPage() {
           <span className="text-foreground-100">Next</span>
         </div>
         <div className="flex justify-between items-center">
-          <ArrowLink href="/aurora">Aurora</ArrowLink>
-          <ArrowLink href="/moje-slovensko" arrowPosition="right">
+          <ArrowLink href="/v2/aurora">Aurora</ArrowLink>
+          <ArrowLink href="/v2/moje-slovensko" arrowPosition="right">
             Moje Slovensko
           </ArrowLink>
         </div>
