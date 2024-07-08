@@ -8,7 +8,7 @@ interface BlockItemProps {
 const BlockItem: React.FC<BlockItemProps> = ({ icon, children }) => {
   const IconElement = () =>
     icon && React.isValidElement(icon)
-      ? React.cloneElement(icon, { className: 'w-6' })
+      ? React.cloneElement(icon as React.ReactElement, { className: 'w-6' })
       : null;
 
   return (

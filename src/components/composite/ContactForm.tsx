@@ -5,7 +5,7 @@ interface ContactFormProps {}
 
 const ContactForm: React.FC<ContactFormProps> = ({}) => {
   const formRef = useRef<HTMLFormElement>(null);
-  const { send, state, setState } = useContactForm(formRef);
+  const { send } = useContactForm(formRef);
 
   return (
     <>
