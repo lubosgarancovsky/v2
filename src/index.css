@@ -66,4 +66,25 @@
   .link {
     @apply text-blue-500 hover:text-blue-600;
   }
+
+  /* HTML: <div class="loader"></div> */
+  .loader {
+    width: 18px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background:
+      radial-gradient(farthest-side, #171717 94%, #0000) top/2px 2px no-repeat,
+      conic-gradient(#0000 30%, #171717);
+    -webkit-mask: radial-gradient(
+      farthest-side,
+      #0000 calc(100% - 4px),
+      #000 0
+    );
+    animation: l13 1s infinite linear;
+  }
+  @keyframes l13 {
+    100% {
+      transform: rotate(1turn);
+    }
+  }
 }

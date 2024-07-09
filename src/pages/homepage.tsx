@@ -67,7 +67,7 @@ function Homepage() {
         <p className="text-foreground-100">Web developer</p>
 
         <p className="text-foreground-100 mt-8 max-w-2xl">
-          My main focus is to write feature rich web applications with an
+          My main focus is to write feature-rich web applications with an
           emphasis on reliability and performance.
         </p>
 
@@ -141,7 +141,7 @@ function Homepage() {
       </Section>
       <Section
         title="Stack"
-        subtitle="I specialize in technologies that run on Java and Javascript"
+        subtitle="I focus on developing with Java and JavaScript"
       >
         <div className="grid tb1:grid-cols-2 gap-4">
           <BlockItem icon={<React />}>React</BlockItem>
@@ -168,7 +168,7 @@ function Homepage() {
       </Section>
       <Section
         title="Contact"
-        subtitle="Dont forget to include your e-mail, so I can message you back"
+        subtitle="Include your email and I will get back to you as soon as possible"
       >
         <ContactForm />
       </Section>
