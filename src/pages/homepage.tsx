@@ -11,55 +11,15 @@ import {
   Spring,
   Tailwind
 } from '../components';
-import PapThumbnail from '../assets/images/pap - thumbnail.jpg';
-import KsdrThumbnail from '../assets/images/ksdr - thumbnail.jpg';
-import AuroraThumbnail from '../assets/images/aurora - thumbnail.png';
-import PathfinderThumbanil from '../assets/images/pathfinder - thumbnail.png';
-import LifesimThumbanil from '../assets/images/lifesim - thumbnail.png';
-import WatherThumbanil from '../assets/images/weather - thumbnail.png';
-import NotesThumbanil from '../assets/images/notes - thumbnail.webp';
-import SkitLogo from '../assets/images/skit - logo.png';
-import { Project } from '../types';
+import PapThumbnail from '../assets/images/pap - thumbnail.webp';
+import KsdrThumbnail from '../assets/images/ksdr - thumbnail.webp';
+import AuroraThumbnail from '../assets/images/aurora - thumbnail.webp';
+import PlanPalThumbnail from '../assets/images/planpal - thumbnail.webp';
+
+import SkitLogo from '../assets/images/skit - logo.webp';
+import { projects } from '../utils';
 
 function Homepage() {
-  const projects: Project[] = [
-    {
-      img: PathfinderThumbanil,
-      title: 'Pathfinder',
-      description: 'Pathfinding algorithm visualiser',
-      link: 'https://lubosgarancovsky.github.io/pathfinder/',
-      year: '2023'
-    },
-    {
-      img: LifesimThumbanil,
-      title: 'LifeSim',
-      description: 'Ecosystem simulation',
-      link: 'https://lubosgarancovsky.github.io/LifeSim/',
-      year: '2023'
-    },
-    {
-      img: WatherThumbanil,
-      title: 'WeatherApp',
-      description: 'Weather forecast',
-      link: 'https://github.com/lubosgarancovsky/WeatherApp',
-      year: '2022'
-    },
-    {
-      img: 'https://camo.githubusercontent.com/fa37e3b8c31dbeb45670a418a9650d705a10e0de9c873165cb1ec111ff2571ee/68747470733a2f2f666972656261736573746f726167652e676f6f676c65617069732e636f6d2f76302f622f706f7274666f6c696f2d35366233392e61707073706f742e636f6d2f6f2f706f7274666f6c696f25324670726f6a65637473253246627269636b2d627265616b65722d707967616d65253246627269636b2d627265616b65722d67616d652e706e673f616c743d6d6564696126746f6b656e3d38333765316462322d373832382d346661302d613730652d353037333033326535393035',
-      title: 'Brick Breaker',
-      description: 'Python game',
-      link: 'https://github.com/lubosgarancovsky/BrickBreaker',
-      year: '2022'
-    },
-    {
-      img: NotesThumbanil,
-      title: 'My simple notes',
-      description: 'Android note taking application',
-      link: 'https://github.com/lubosgarancovsky/MySimpleNotes',
-      year: '2022'
-    }
-  ];
-
   return (
     <Layout>
       <section id="hero">
@@ -92,7 +52,12 @@ function Homepage() {
             description="Platform for viewing and sharing official documents"
           >
             <div className="px-8 pt-8">
-              <img src={KsdrThumbnail} />
+              <img
+                src={KsdrThumbnail}
+                alt="ksdr - thumbnail"
+                width={350}
+                height={180}
+              />
             </div>
           </Card>
           <Card
@@ -101,7 +66,12 @@ function Homepage() {
             description="Personal zone of a citizen"
           >
             <div className="px-8 pt-8">
-              <img src={PapThumbnail} />
+              <img
+                src={PapThumbnail}
+                alt="pap - thumbnail"
+                width={350}
+                height={180}
+              />
             </div>
           </Card>
           <Card
@@ -110,7 +80,26 @@ function Homepage() {
             description="Project managment application"
           >
             <div className="px-8 pt-8">
-              <img src={AuroraThumbnail} />
+              <img
+                src={AuroraThumbnail}
+                alt="aurora - thumbnail"
+                width={350}
+                height={180}
+              />
+            </div>
+          </Card>
+          <Card
+            href="/v2/planpal"
+            title="PlanPal"
+            description="To-do list application"
+          >
+            <div className="px-8 pt-8">
+              <img
+                src={PlanPalThumbnail}
+                alt="palplan - thumbnail"
+                width={350}
+                height={180}
+              />
             </div>
           </Card>
         </div>
@@ -118,7 +107,12 @@ function Homepage() {
       <Section title="Other projects & experiments">
         <ul className="opaque-list">
           {projects.map((project, index) => (
-            <FloatingThumbnail src={project.img}>
+            <FloatingThumbnail
+              src={project.img}
+              alt={project.title}
+              width={350}
+              height={180}
+            >
               <li key={index}>
                 <a
                   href={project.link}
@@ -157,7 +151,7 @@ function Homepage() {
           href="https://slovenskoit.sk/"
         >
           <div className="rounded-full overflow-hidden w-16">
-            <img src={SkitLogo} />
+            <img src={SkitLogo} alt="skit - logo" width={64} height={64} />
           </div>
           <div className="flex flex-col w-full">
             <span>Software engineer</span>

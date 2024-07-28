@@ -6,6 +6,7 @@ import MojePage from './pages/moje.tsx';
 import AuroraPage from './pages/aurora.tsx';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css';
+import PlanpalPage from './pages/planpal.tsx';
 
 const base = '/v2';
 
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
   {
     path: base + '/aurora',
     element: <AuroraPage />
+  },
+  {
+    path: base + '/planpal',
+    element: <PlanpalPage />
   }
 ]);
 

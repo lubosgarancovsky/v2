@@ -2,7 +2,15 @@ import React, { ImgHTMLAttributes, useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Close } from '../icons';
 
-interface ImageProps extends ImgHTMLAttributes<HTMLImageElement> {}
+interface ImageProps
+  extends Omit<
+    ImgHTMLAttributes<HTMLImageElement>,
+    'alt' | 'width' | 'height'
+  > {
+  width: number;
+  height: number;
+  alt: string;
+}
 
 const Image: React.FC<ImageProps> = ({ ...props }) => {
   const [isOpen, setIsOpen] = useState(false);

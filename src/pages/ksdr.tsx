@@ -46,10 +46,15 @@ function KsdrPage() {
       <Section title="Gallery">
         <div className="grid tb2:grid-cols-2 gap-3">
           <div className="flex flex-col gap-3">
-            <Image src={KSDR01} />
-            <Image src={KSDR02} />
+            <Image src={KSDR01} alt="KSDR - login" width={1920} height={1080} />
+            <Image
+              src={KSDR02}
+              alt="KSDR - mailbox"
+              width={1920}
+              height={1080}
+            />
           </div>
-          <Image src={KSDR03} />
+          <Image src={KSDR03} alt="KSDR - detail" width={1920} height={1080} />
         </div>
       </Section>
       <div>

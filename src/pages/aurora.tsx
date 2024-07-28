@@ -7,7 +7,7 @@ import {
   Github
 } from '../components';
 
-import AUR00 from '../assets/images/aurora - thumbnail.png';
+import AUR00 from '../assets/images/aurora - thumbnail.webp';
 import AUR01 from '../assets/images/aurora/01.webp';
 import AUR02 from '../assets/images/aurora/02.webp';
 import AUR03 from '../assets/images/aurora/03.webp';
@@ -91,12 +91,17 @@ function AuroraPage() {
       </Section>
       <Section title="Gallery">
         <div className="flex flex-col gap-3">
-          <Image src={AUR01} />
-          <Image src={AUR02} />
+          <Image src={AUR01} alt="AUR - login" width={1920} height={1080} />
+          <Image src={AUR02} alt="AUR - projects" width={1920} height={1080} />
 
-          <Image src={AUR03} />
-          <Image src={AUR00} />
-          <Image src={AUR04} />
+          <Image
+            src={AUR03}
+            alt="AUR - new project"
+            width={1920}
+            height={1080}
+          />
+          <Image src={AUR00} alt="AUR - dashboard" width={1920} height={1080} />
+          <Image src={AUR04} alt="AUR - sidebar" width={1920} height={1080} />
         </div>
       </Section>
       <div>
@@ -106,8 +111,8 @@ function AuroraPage() {
         </div>
         <div className="flex justify-between items-center">
           <ArrowLink href="/v2/moje-slovensko">Moje Slovensko</ArrowLink>
-          <ArrowLink href="/v2/ksdr" arrowPosition="right">
-            KSDR
+          <ArrowLink href="/v2/planpal" arrowPosition="right">
+            PlanPal
           </ArrowLink>
         </div>
       </div>

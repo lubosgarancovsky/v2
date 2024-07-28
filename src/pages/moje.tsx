@@ -43,13 +43,23 @@ function MojePage() {
       <Section title="Gallery">
         <div className="grid tb2:grid-cols-2 gap-3">
           <div className="flex flex-col gap-3">
-            <Image src={PAP03} />
-            <Image src={PAP01} />
+            <Image src={PAP03} alt="PAP - detail" width={1920} height={1080} />
+            <Image
+              src={PAP01}
+              alt="PAP - dashboard"
+              width={1920}
+              height={1080}
+            />
           </div>
 
           <div className="flex flex-col gap-3">
-            <Image src={PAP02} />
-            <Image src={PAP04} />
+            <Image
+              src={PAP02}
+              alt="PAP - life events"
+              width={1920}
+              height={1080}
+            />
+            <Image src={PAP04} alt="PAP - detail" width={1920} height={1080} />
           </div>
         </div>
       </Section>

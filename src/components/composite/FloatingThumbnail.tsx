@@ -4,11 +4,14 @@ import { motion } from 'framer-motion';
 interface FloatingThumbnailProps {
   children: React.ReactNode;
   src: string;
+  width: number;
+  height: number;
+  alt: string;
 }
 
 const FloatingThumbnail: React.FC<FloatingThumbnailProps> = ({
   children,
-  src
+  ...props
 }) => {
   const [isHovered, setIsHovered] = React.useState(false);
   const [position, setPosition] = React.useState({ x: 0, y: 0 });
@@ -45,7 +48,7 @@ const FloatingThumbnail: React.FC<FloatingThumbnailProps> = ({
           transition={{ duration: 0, ease: 'easeIn', delay: 0 }}
           className="absolute top-0 left-0 z-50 rounded-md w-80 overflow-hidden hidden tb2:block"
         >
-          <img src={src} />
+          <img {...props} />
         </motion.div>
       )}
     </div>
