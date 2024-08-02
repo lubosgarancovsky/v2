@@ -9,6 +9,13 @@ import PlanPalThumbnail from '../assets/images/planpal - thumbnail.webp';
 
 export const projects: Project[] = [
   {
+    img: PlanPalThumbnail,
+    title: 'PlanPal',
+    description: 'Todo list application',
+    link: 'https://lubosgarancovsky.github.io/planpal/',
+    year: '2024'
+  },
+  {
     img: PathfinderThumbanil,
     title: 'Pathfinder',
     description: 'Pathfinding algorithm visualiser',
@@ -20,13 +27,6 @@ export const projects: Project[] = [
     title: 'LifeSim',
     description: 'Ecosystem simulation',
     link: 'https://lubosgarancovsky.github.io/LifeSim/',
-    year: '2023'
-  },
-  {
-    img: PlanPalThumbnail,
-    title: 'PlanPal',
-    description: 'Todo list application',
-    link: 'https://lubosgarancovsky.github.io/planpal/',
     year: '2023'
   },
   {
