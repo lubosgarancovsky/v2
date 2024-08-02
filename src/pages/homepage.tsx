@@ -157,7 +157,7 @@ function Homepage() {
             <span>Software engineer</span>
             <span className="text-foreground-200">Slovensko IT a.s.</span>
           </div>
-          <p className="text-foreground-200 text-nowrap">2022 - present</p>
+          <p className="text-foreground-200 text-nowrap">2022 - 2024</p>
         </a>
       </Section>
       <Section
