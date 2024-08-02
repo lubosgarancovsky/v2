@@ -14,7 +14,7 @@ import {
 import PapThumbnail from '../assets/images/pap - thumbnail.webp';
 import KsdrThumbnail from '../assets/images/ksdr - thumbnail.webp';
 import AuroraThumbnail from '../assets/images/aurora - thumbnail.webp';
-import PlanPalThumbnail from '../assets/images/planpal - thumbnail.webp';
+import McManagerThumbnail from '../assets/images/mcmanager - thumbnail.webp';
 
 import SkitLogo from '../assets/images/skit - logo.webp';
 import { projects } from '../utils';
@@ -89,14 +89,14 @@ function Homepage() {
             </div>
           </Card>
           <Card
-            href="/v2/planpal"
-            title="PlanPal"
-            description="To-do list application"
+            href="/v2/mcmanager"
+            title="MC Manager"
+            description="Minecraft resources manager"
           >
             <div className="px-8 pt-8">
               <img
-                src={PlanPalThumbnail}
-                alt="palplan - thumbnail"
+                src={McManagerThumbnail}
+                alt="mc manager - thumbnail"
                 width={350}
                 height={180}
               />

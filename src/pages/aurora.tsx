@@ -111,8 +111,8 @@ function AuroraPage() {
         </div>
         <div className="flex justify-between items-center">
           <ArrowLink href="/v2/moje-slovensko">Moje Slovensko</ArrowLink>
-          <ArrowLink href="/v2/planpal" arrowPosition="right">
-            PlanPal
+          <ArrowLink href="/v2/mcmanager" arrowPosition="right">
+            MC Manager
           </ArrowLink>
         </div>
       </div>

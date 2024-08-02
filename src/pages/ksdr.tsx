@@ -63,7 +63,7 @@ function KsdrPage() {
           <span className="text-foreground-100">Next</span>
         </div>
         <div className="flex justify-between items-center">
-          <ArrowLink href="/v2/aurora">Aurora</ArrowLink>
+          <ArrowLink href="/v2/mcmanager">MC Manager</ArrowLink>
           <ArrowLink href="/v2/moje-slovensko" arrowPosition="right">
             Moje Slovensko
           </ArrowLink>

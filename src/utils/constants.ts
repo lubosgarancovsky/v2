@@ -5,6 +5,7 @@ import LifesimThumbanil from '../assets/images/lifesim - thumbnail.webp';
 import WatherThumbanil from '../assets/images/weather - thumbnail.webp';
 import NotesThumbanil from '../assets/images/notes - thumbnail.webp';
 import BrickBreakerThumbnail from '../assets/images/brickbreaker-thumbnail.webp';
+import PlanPalThumbnail from '../assets/images/planpal - thumbnail.webp';
 
 export const projects: Project[] = [
   {
@@ -19,6 +20,13 @@ export const projects: Project[] = [
     title: 'LifeSim',
     description: 'Ecosystem simulation',
     link: 'https://lubosgarancovsky.github.io/LifeSim/',
+    year: '2023'
+  },
+  {
+    img: PlanPalThumbnail,
+    title: 'PlanPal',
+    description: 'Todo list application',
+    link: 'https://lubosgarancovsky.github.io/planpal/',
     year: '2023'
   },
   {

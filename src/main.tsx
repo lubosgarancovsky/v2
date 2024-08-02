@@ -7,6 +7,7 @@ import AuroraPage from './pages/aurora.tsx';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css';
 import PlanpalPage from './pages/planpal.tsx';
+import McManager from './pages/mcmanager.tsx';
 
 const base = '/v2';
 
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
   {
     path: base + '/planpal',
     element: <PlanpalPage />
+  },
+  {
+    path: base + '/mcmanager',
+    element: <McManager />
   }
 ]);
 
