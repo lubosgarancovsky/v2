@@ -17,7 +17,7 @@ const Header: React.FC<HeaderProps> = () => {
       }}
       className="fixed top-0 z-50 w-full flex justify-center max-w-5xl mx-auto origin-top"
     >
-      <div className="px-5 py-1.5 mt-4 bg-background-100/50 border border-background-100 max-w-5xl w-full mx-6 backdrop-blur rounded-xl flex justify-between items-center">
+      <div className="p-2 mt-4 bg-background-100/50 border border-background-100 max-w-5xl w-full mx-6 backdrop-blur rounded-xl flex justify-between items-center">
         <IconLink href="/v2" icon={<Home />} target="_self" responsive>
           Ľuboš Garančovský
         </IconLink>
