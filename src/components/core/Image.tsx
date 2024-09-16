@@ -1,4 +1,4 @@
-import React, { ImgHTMLAttributes, useEffect, useState } from 'react';
+import React, { ImgHTMLAttributes, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Close } from '../icons';
 
@@ -14,10 +14,6 @@ interface ImageProps
 
 const Image: React.FC<ImageProps> = ({ ...props }) => {
   const [isOpen, setIsOpen] = useState(false);
-
-  // useEffect(() => {
-  //   document.body.style.overflow = isOpen ? 'hidden' : 'auto';
-  // }, [isOpen]);
 
   return (
     <>
