@@ -18,7 +18,7 @@ const PinnedProjects: React.FC = () => {
       <ProjectCard
         href="/v2/moje-slovensko"
         title="Moje Slovensko"
-        description="Mailbox simplifying communication between citizends and public authorities"
+        description="Mailbox simplifying communication between citizens and public authorities"
         image={PapThumbnail}
       />
 
