@@ -55,40 +55,43 @@ const ArrowLink: React.FC<ArrowLinkProps> = ({
   );
 
   return (
-    <motion.a
-      initial="initial"
-      whileHover="hover"
-      className="arrow-link flex gap-3 items-center w-fit"
-      {...props}
-    >
-      {arrowPosition === 'right' && <span>{children}</span>}
+    <>
+      {/* @ts-ignore */}
+      <motion.a
+        initial="initial"
+        whileHover="hover"
+        className="arrow-link flex gap-3 items-center w-fit"
+        {...props}
+      >
+        {arrowPosition === 'right' && <span>{children}</span>}
 
-      <div className="p-1.5 bg-background-200 text-foreground-100 rounded-full relative overflow-hidden flex">
-        <motion.div
-          variants={
-            arrowPosition === 'left' ? leftVariantLeft : rightVariantLeft
-          }
-          transition={{
-            ease: 'easeInOut'
-          }}
-        >
-          <Arrow className={style} />
-        </motion.div>
+        <div className="p-1.5 bg-background-200 text-foreground-100 rounded-full relative overflow-hidden flex">
+          <motion.div
+            variants={
+              arrowPosition === 'left' ? leftVariantLeft : rightVariantLeft
+            }
+            transition={{
+              ease: 'easeInOut'
+            }}
+          >
+            <Arrow className={style} />
+          </motion.div>
 
-        <motion.div
-          variants={
-            arrowPosition === 'left' ? leftVariantRight : rightVariantRight
-          }
-          transition={{
-            ease: 'easeInOut'
-          }}
-          className="absolute -translate-x-full"
-        >
-          <Arrow className={style} />
-        </motion.div>
-      </div>
-      {arrowPosition === 'left' && <span>{children}</span>}
-    </motion.a>
+          <motion.div
+            variants={
+              arrowPosition === 'left' ? leftVariantRight : rightVariantRight
+            }
+            transition={{
+              ease: 'easeInOut'
+            }}
+            className="absolute -translate-x-full"
+          >
+            <Arrow className={style} />
+          </motion.div>
+        </div>
+        {arrowPosition === 'left' && <span>{children}</span>}
+      </motion.a>
+    </>
   );
 };
 
