@@ -17,7 +17,7 @@ const ContactForm: React.FC<ContactFormProps> = ({}) => {
           className={cn('bg-background-100 rounded-md p-4', {
             'outline outline-red-500': state === 'error'
           })}
-          placeholder="Your message here..."
+          placeholder="Your message..."
           name="message"
           rows={6}
           required

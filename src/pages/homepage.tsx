@@ -124,7 +124,6 @@ function Homepage() {
       </Section>
       <Section
         title="Contact"
-        subtitle="Include your email and I will get back to you as soon as possible"
       >
         <ContactForm />
       </Section>
