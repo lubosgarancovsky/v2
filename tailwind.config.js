@@ -24,6 +24,9 @@ export default {
         dm1: '1120px',
         dm2: '1440px',
         dl: '1530px'
+      },
+      boxShadow: {
+        gradient: '1px 4px 12px 0px rgba(50, 67, 223, 0.7)'
       }
     }
   },

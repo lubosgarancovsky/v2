@@ -15,9 +15,9 @@ interface ImageProps
 const Image: React.FC<ImageProps> = ({ ...props }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  useEffect(() => {
-    document.body.style.overflow = isOpen ? 'hidden' : 'auto';
-  }, [isOpen]);
+  // useEffect(() => {
+  //   document.body.style.overflow = isOpen ? 'hidden' : 'auto';
+  // }, [isOpen]);
 
   return (
     <>
@@ -50,7 +50,7 @@ const Image: React.FC<ImageProps> = ({ ...props }) => {
       </AnimatePresence>
 
       <button onClick={() => setIsOpen(true)}>
-        <img {...props} loading="lazy" />
+        <img loading="lazy" {...props} />
       </button>
     </>
   );

@@ -8,6 +8,10 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css';
 import PlanpalPage from './pages/planpal.tsx';
 import McManager from './pages/mcmanager.tsx';
+import { ReactLenis } from '@studio-freight/react-lenis';
+import IdskPage from './pages/idsk3.tsx';
+import PathfinderPage from './pages/pathfinder.tsx';
+import LifesimPage from './pages/lifesim.tsx';
 
 const base = '/v2';
 
@@ -35,11 +39,25 @@ const router = createBrowserRouter([
   {
     path: base + '/mcmanager',
     element: <McManager />
+  },
+  {
+    path: base + '/idsk3',
+    element: <IdskPage />
+  },
+  {
+    path: base + '/lifesim',
+    element: <LifesimPage />
+  },
+  {
+    path: base + '/pathfinder',
+    element: <PathfinderPage />
   }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <ReactLenis root>
+      <RouterProvider router={router} />
+    </ReactLenis>
   </React.StrictMode>
 );

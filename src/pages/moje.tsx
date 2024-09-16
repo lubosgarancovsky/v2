@@ -1,4 +1,13 @@
-import { ArrowLink, Layout, Section, Image, Badge } from '../components';
+import {
+  Layout,
+  Section,
+  ProjectLayout,
+  Card,
+  Auth,
+  Download,
+  User
+} from '../components';
+import PAPThumbnail from '../assets/images/pap/pap-thumbnail.webp';
 import PAP01 from '../assets/images/pap/01.webp';
 import PAP02 from '../assets/images/pap/02.webp';
 import PAP03 from '../assets/images/pap/03.webp';
@@ -7,74 +16,89 @@ import PAP04 from '../assets/images/pap/04.webp';
 function MojePage() {
   return (
     <Layout>
-      <div className="flex justify-between items-center">
-        <ArrowLink href="/v2/">Back</ArrowLink>
-
-        <span className="text-foreground-100">2024</span>
-      </div>
-      <Section>
-        <p className="mb-2">Moje Slovensko</p>
-        <div className="flex flex-col gap-6">
-          <p className="text-foreground-100">
-            Moje Slovensko is another component of public administration system.
-            It functions as a personal zone of a citizen, a dashboard where he
-            can change various settings of his profile or perform actions on
-            behalf of a subject he represents.
-          </p>
-          <p className="text-foreground-100">
-            The application is built on the reliable Next.js framework and
-            styled with Tailwind CSS. Emphasis was placed on the responsiveness
-            and accessibility of the user interface, which is translated into
-            Slovak and English using i18next. The application also includes a
-            robust permission control system, where certain parts of the UI are
-            hidden or disabled for users without the necessary permissions. User
-            authentication is handled using the NextAuth library, ensuring
-            secure and efficient login processes.
-          </p>
-          <div className="flex gap-3 flex-wrap">
-            <Badge>Next.js</Badge>
-            <Badge>React</Badge>
-            <Badge>NextAuth</Badge>
-            <Badge>i18next</Badge>
-            <Badge>Tailwindcss</Badge>
+      <ProjectLayout
+        title="Moje Slovensko"
+        description="Moje Slovensko is another component of public administration system.
+            It functions as a personal zone of a citizen, a dashboard where they
+            can change various settings of their profile, browse their electronic mailbox or perform actions on
+            behalf of a subject they represent."
+        thumbnail={PAPThumbnail}
+        technologies={['Next.js', 'Tailwind', 'NextAuth', 'i18next']}
+        prev={{ href: '/ksdr', title: 'KSDR' }}
+        next={{ href: '/idsk3', title: 'ID-SK 3' }}
+      >
+        <Section title="Features">
+          <div className="grid tb2:grid-cols-3 gap-8">
+            <Card title="Authentication" icon={<Auth />}>
+              JWT based authentication system and SAML provider
+            </Card>
+            <Card title="File display" icon={<Download />}>
+              Downloading and visualisation of various file formats
+            </Card>
+            <Card title="On behalf of" icon={<User />}>
+              Accessing the system on behalf of another user
+            </Card>
           </div>
-        </div>
-      </Section>
-      <Section title="Gallery">
-        <div className="grid tb2:grid-cols-2 gap-3">
-          <div className="flex flex-col gap-3">
-            <Image src={PAP03} alt="PAP - detail" width={1920} height={1080} />
-            <Image
+        </Section>
+        <Section title="Problems solved">
+          <div className="flex flex-col gap-8">
+            <div>
+              <span className="inline-block mb-0.5">User roles</span>
+              <p className="text-foreground-100">
+                When accessing the system on behalf of another user, some
+                buttons and inputs had to be disabled and entire sections of the
+                UI hidden based on the level of permissions of the subject. I
+                created wrappers and higher order components to make this
+                process reliable and efficient while keeping the code clean and
+                readable.
+              </p>
+            </div>
+
+            <div>
+              <span className="inline-block mb-0.5">Poor performance</span>
+              <p className="text-foreground-100">
+                Handling XML documents received by the mailbox became a serious
+                challenge in terms of performance. The utility I developed to
+                manage these documents became a critical component of the
+                project, significantly reducing loading times and providing
+                reliable error handling for invalid data.
+              </p>
+            </div>
+          </div>
+        </Section>
+        <Section title="Gallery">
+          <div className="flex flex-col gap-8">
+            <img
+              src={PAP03}
+              className="rounded-xl"
+              alt="Moje Slovensko - login"
+              width={1920}
+              height={1080}
+            />
+            <img
               src={PAP01}
-              alt="PAP - dashboard"
+              className="rounded-xl"
+              alt="Moje Slovensko - dashboard"
               width={1920}
               height={1080}
             />
-          </div>
-
-          <div className="flex flex-col gap-3">
-            <Image
+            <img
               src={PAP02}
-              alt="PAP - life events"
+              className="rounded-xl"
+              alt="Moje Slovensko - live event"
               width={1920}
               height={1080}
             />
-            <Image src={PAP04} alt="PAP - detail" width={1920} height={1080} />
+            <img
+              src={PAP04}
+              className="rounded-xl"
+              alt="Moje Slovensko - detail"
+              width={1920}
+              height={1080}
+            />
           </div>
-        </div>
-      </Section>
-      <div>
-        <div className="flex justify-between">
-          <span className="text-foreground-100">Previous</span>
-          <span className="text-foreground-100">Next</span>
-        </div>
-        <div className="flex justify-between items-center">
-          <ArrowLink href="/v2/ksdr">KSDR</ArrowLink>
-          <ArrowLink href="/v2/aurora" arrowPosition="right">
-            Aurora
-          </ArrowLink>
-        </div>
-      </div>
+        </Section>
+      </ProjectLayout>
     </Layout>
   );
 }

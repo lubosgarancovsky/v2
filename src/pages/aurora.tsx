@@ -1,10 +1,11 @@
 import {
-  ArrowLink,
-  Badge,
   Layout,
   Section,
-  Image,
-  Github
+  ProjectLayout,
+  Card,
+  Auth,
+  Filter,
+  Database
 } from '../components';
 
 import AUR00 from '../assets/images/aurora - thumbnail.webp';
@@ -16,106 +17,106 @@ import AUR04 from '../assets/images/aurora/04.webp';
 function AuroraPage() {
   return (
     <Layout>
-      <div className="flex justify-between items-center">
-        <ArrowLink href="/v2/">Back</ArrowLink>
-
-        <span className="text-foreground-100">2024</span>
-      </div>
-      <Section>
-        <p className="mb-2">Aurora</p>
-        <div className="flex flex-col gap-6">
-          <p className="text-foreground-100">
-            Aurora is my personal full-stack web application designed to allow
+      <ProjectLayout
+        title="Aurora"
+        description="Aurora is my personal full-stack web application designed to allow
             users to create and manage their projects efficiently by creating
             tasks and subtasks, reassigning them between team members, and
-            moving them between different states.
-          </p>
-          <p className="text-foreground-100">
-            The front end of the application is powered by the Next.js
-            framework, along with powerful libraries like TanStack Query for
-            data fetching and caching, and NextAuth for secure authentication.
-            The back end utilizes the robust Java Spring Boot framework,
-            employing a relational PostgreSQL database to store data and a REST
-            API to facilitate communication between the client and server.
-          </p>
-          <p className="text-foreground-100">
-            My aim was to build a powerful API that utilizes RSQL to simplify
-            sorting and filtering of data, enhancing the overall user experience
-            by making data management more intuitive and efficient.
-          </p>
-          <div className="flex gap-3 flex-wrap">
-            <Badge>Next.js</Badge>
-            <Badge>NextAuth</Badge>
-            <Badge>TanStack Query</Badge>
-            <Badge>Spring Boot</Badge>
-            <Badge>Spring Security</Badge>
-            <Badge>PostgreSQL</Badge>
-            <Badge>Flyway</Badge>
-            <Badge>Jooq</Badge>
+            moving them between different states."
+        thumbnail={AUR00}
+        prev={{
+          title: 'MC Manager',
+          href: '/mcmanager'
+        }}
+        next={{
+          title: 'KSDR',
+          href: '/ksdr'
+        }}
+        technologies={[
+          'Java',
+          'Spring boot',
+          'Spring security',
+          'Jooq',
+          'Postgresql',
+          'Docker'
+        ]}
+        href="https://github.com/lubosgarancovsky/aurora-be"
+      >
+        <Section title="Features">
+          <div className="grid tb2:grid-cols-3 gap-8">
+            <Card title="Authentication" icon={<Auth />}>
+              JWT authentication using Spring security
+            </Card>
+            <Card title="Jooq" icon={<Database />}>
+              Utilization of Jooq ORM for type safe database access
+            </Card>
+            <Card title="RSQL" icon={<Filter />}>
+              Support for filtering, sorting and paginations with RSQL
+            </Card>
           </div>
-        </div>
-      </Section>
-      <Section title="Links">
-        <ul className="flex gap-2 tb1:gap-8 flex-col tb1:flex-row">
-          <li>
-            <a
-              className="flex items-center gap-3 link"
-              href="https://github.com/lubosgarancovsky/aurora-fe"
-              target="_blank"
-            >
-              <Github className="w-5" />
-              <span>Front end</span>
-            </a>
-          </li>
-          <li>
-            <a
-              className="flex items-center gap-3 link"
-              href="https://github.com/lubosgarancovsky/aurora-be"
-              target="_blank"
-            >
-              <Github className="w-5" />
-              <span>Back end</span>
-            </a>
-          </li>
-          <li>
-            <a
-              className="flex items-center gap-3 link"
-              href="https://github.com/lubosgarancovsky/be_lib"
-              target="_blank"
-            >
-              <Github className="w-5" />
-              <span>RSQL library</span>
-            </a>
-          </li>
-        </ul>
-      </Section>
-      <Section title="Gallery">
-        <div className="flex flex-col gap-3">
-          <Image src={AUR01} alt="AUR - login" width={1920} height={1080} />
-          <Image src={AUR02} alt="AUR - projects" width={1920} height={1080} />
+        </Section>
+        {/* <Section title="Problems solved">
+          <div className="flex flex-col gap-8">
+            <div>
+              <span className="inline-block mb-0.5">Modpack testing</span>
+              <p className="text-foreground-100">
+                When a large number of mods are installed into Minecraft, one or
+                more mods may cause errors that prevent the game from launching.
+                A tedious trial-and-error process is often required to identify
+                which mod is causing the issue.
+              </p>
 
-          <Image
-            src={AUR03}
-            alt="AUR - new project"
-            width={1920}
-            height={1080}
-          />
-          <Image src={AUR00} alt="AUR - dashboard" width={1920} height={1080} />
-          <Image src={AUR04} alt="AUR - sidebar" width={1920} height={1080} />
-        </div>
-      </Section>
-      <div>
-        <div className="flex justify-between">
-          <span className="text-foreground-100">Previous</span>
-          <span className="text-foreground-100">Next</span>
-        </div>
-        <div className="flex justify-between items-center">
-          <ArrowLink href="/v2/moje-slovensko">Moje Slovensko</ArrowLink>
-          <ArrowLink href="/v2/mcmanager" arrowPosition="right">
-            MC Manager
-          </ArrowLink>
-        </div>
-      </div>
+              <p className="text-foreground-100 mt-4">
+                To solve this problem, I created a desktop application that
+                simplifies the process of removing mods from the game folder
+                while allowing users to keep track of which mods they have
+                already disabled. With a process similar to a binary search
+                algorithm, the user can quickly identify the issue by clicking
+                just a few buttons.
+              </p>
+            </div>
+          </div>
+        </Section> */}
+        <Section title="Gallery">
+          <div className="flex flex-col gap-8">
+            <img
+              src={AUR01}
+              className="rounded-xl"
+              alt="MC manager - resource packs"
+              width={1920}
+              height={1080}
+            />
+            <img
+              src={AUR02}
+              className="rounded-xl"
+              alt="MC manager - resource packs"
+              width={1920}
+              height={1080}
+            />
+            <img
+              src={AUR03}
+              className="rounded-xl"
+              alt="MC manager - resource packs"
+              width={1920}
+              height={1080}
+            />
+            <img
+              src={AUR00}
+              className="rounded-xl"
+              alt="MC Manager - mods"
+              width={1920}
+              height={1080}
+            />
+            <img
+              src={AUR04}
+              className="rounded-xl"
+              alt="MC manager - resource packs"
+              width={1920}
+              height={1080}
+            />
+          </div>
+        </Section>
+      </ProjectLayout>
     </Layout>
   );
 }

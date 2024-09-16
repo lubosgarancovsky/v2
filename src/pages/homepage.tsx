@@ -1,139 +1,100 @@
 import {
-  BlockItem,
-  Card,
-  ContactForm,
-  FloatingThumbnail,
+  // BlockItem,
   Layout,
-  LinkBadge,
-  Nextjs,
-  React,
+  // Nextjs,
+  // React,
   Section,
-  Spring,
-  Tailwind
+  // Spring,
+  // Tailwind,
+  PinnedProjects,
+  OtherProjects,
+  IconLink,
+  LinkedIn,
+  Github,
+  // Animation,
+  // Phone,
+  // LinkBadge,
+  // Tools,
+  ContactForm
 } from '../components';
-import PapThumbnail from '../assets/images/pap - thumbnail.webp';
-import KsdrThumbnail from '../assets/images/ksdr - thumbnail.webp';
-import AuroraThumbnail from '../assets/images/aurora - thumbnail.webp';
-import McManagerThumbnail from '../assets/images/mcmanager - thumbnail.webp';
 
 import SkitLogo from '../assets/images/skit - logo.webp';
-import { projects } from '../utils';
+import { useRef } from 'react';
 
 function Homepage() {
-  return (
-    <Layout>
-      <section id="hero">
-        <p>Ľuboš Garančovský</p>
-        <p className="text-foreground-100">Web developer</p>
+  const heroRef = useRef<HTMLDivElement>(null);
 
-        <p className="text-foreground-100 mt-8 max-w-2xl">
-          My main focus is to write feature-rich web applications with an
-          emphasis on reliability and performance.
+  return (
+    <Layout headerTrigger={heroRef}>
+      <Section id="hero" className="mt-12">
+        <h1>
+          Ľuboš <span className="text-blue-500">Garančovský</span>
+        </h1>
+
+        <p className="text-foreground-100 mt-4 max-w-2xl text-lg tb2:text-xl font-medium">
+          React and Next.js web developer focusing on writing feature-rich web
+          applications with emphasis on reliability and performance.
         </p>
 
-        <div className="flex gap-3 mt-8">
-          <LinkBadge href="https://github.com/lubosgarancovsky" target="_blank">
-            Github
-          </LinkBadge>
-          <LinkBadge
+        <div ref={heroRef} className="flex gap-3 mt-8">
+          <IconLink
             href="https://www.linkedin.com/in/lubos-garancovsky/"
-            target="_blank"
+            icon={<LinkedIn />}
           >
             Linkedin
-          </LinkBadge>
+          </IconLink>
+          <IconLink
+            href="https://github.com/lubosgarancovsky"
+            icon={<Github />}
+          >
+            Github
+          </IconLink>
         </div>
-      </section>
+      </Section>
 
-      <Section title="Pinned projects">
-        <div className="grid grid-cols-1 tb2:grid-cols-2 gap-12 opaque-list">
-          <Card
-            href="/v2/ksdr"
-            title="KSDR"
-            description="Platform for viewing and sharing official documents"
-          >
-            <div className="px-8 pt-8">
-              <img
-                src={KsdrThumbnail}
-                alt="ksdr - thumbnail"
-                width={350}
-                height={180}
-              />
-            </div>
-          </Card>
-          <Card
-            href="/v2/moje-slovensko"
-            title="Moje Slovensko"
-            description="Personal zone of a citizen"
-          >
-            <div className="px-8 pt-8">
-              <img
-                src={PapThumbnail}
-                alt="pap - thumbnail"
-                width={350}
-                height={180}
-              />
-            </div>
-          </Card>
-          <Card
-            href="/v2/aurora"
-            title="Aurora"
-            description="Project managment application"
-          >
-            <div className="px-8 pt-8">
-              <img
-                src={AuroraThumbnail}
-                alt="aurora - thumbnail"
-                width={350}
-                height={180}
-              />
-            </div>
-          </Card>
-          <Card
-            href="/v2/mcmanager"
-            title="MC Manager"
-            description="Minecraft resources manager"
-          >
-            <div className="px-8 pt-8">
-              <img
-                src={McManagerThumbnail}
-                alt="mc manager - thumbnail"
-                width={350}
-                height={180}
-              />
-            </div>
-          </Card>
+      {/* <Section>
+        <div className="grid gap-8 tb2:grid-cols-3">
+          <div className="bg-background-100/50 p-6 rounded-xl">
+            <Animation className="w-8 mb-8 text-blue-500" />
+            Interactivity
+            <p className="text-foreground-100 mt-2">
+              I use performant tools to create beautifull
+            </p>
+          </div>
+
+          <div className="bg-background-100/50 p-6 rounded-xl">
+            <Phone className="w-8 mb-8 text-blue-500" />
+            Responsivity
+            <p className="text-foreground-100 mt-2">
+              Lorem ipsum dolor sit amet
+            </p>
+          </div>
+
+          <div className="bg-background-100/50 p-6 rounded-xl">
+            <Tools className="w-8 mb-8 text-blue-500" />
+            Reliability
+            <p className="text-foreground-100 mt-2">
+              Lorem ipsum dolor sit amet
+            </p>
+          </div>
         </div>
-      </Section>
-      <Section title="Other projects & experiments">
-        <ul className="opaque-list">
-          {projects.map((project, index) => (
-            <FloatingThumbnail
-              src={project.img}
-              alt={project.title}
-              width={350}
-              height={180}
-            >
-              <li key={index}>
-                <a
-                  href={project.link}
-                  target="_blank"
-                  className="flex w-full gap-3 items-center py-2"
-                >
-                  <span className="text-nowrap">{project.title}</span>
-                  <span className="text-foreground-100 hidden tb2:inline text-nowrap">
-                    {project.description}
-                  </span>
-                  <div className="h-[2px] bg-background-100 w-full mx-4"></div>
-                  <span className="text-foreground-100 ml-auto">
-                    {project.year}
-                  </span>
-                </a>
-              </li>
-            </FloatingThumbnail>
-          ))}
-        </ul>
-      </Section>
+      </Section> */}
+
       <Section
+        title="Pinned projects"
+        subtitle="What I have worked on at Slovensko IT a.s."
+      >
+        <PinnedProjects />
+      </Section>
+
+      <Section
+        title="Other projects & experiments"
+        subtitle="Noteworthy personal projects"
+      >
+        <OtherProjects />
+      </Section>
+
+      {/* <Section
         title="Stack"
         subtitle="I focus on developing with Java and JavaScript"
       >
@@ -143,7 +104,8 @@ function Homepage() {
           <BlockItem icon={<Tailwind />}>Tailwindcss</BlockItem>
           <BlockItem icon={<Spring />}>Spring boot</BlockItem>
         </div>
-      </Section>
+      </Section> */}
+
       <Section title="Experience">
         <a
           className="flex items-center gap-4"
@@ -154,7 +116,7 @@ function Homepage() {
             <img src={SkitLogo} alt="skit - logo" width={64} height={64} />
           </div>
           <div className="flex flex-col w-full">
-            <span>Software engineer</span>
+            <span>Frontend engineer</span>
             <span className="text-foreground-200">Slovensko IT a.s.</span>
           </div>
           <p className="text-foreground-200 text-nowrap">2022 - 2024</p>

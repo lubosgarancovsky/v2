@@ -2,52 +2,34 @@ import { Project } from '../types';
 
 import PathfinderThumbanil from '../assets/images/pathfinder - thumbnail.webp';
 import LifesimThumbanil from '../assets/images/lifesim - thumbnail.webp';
-import WatherThumbanil from '../assets/images/weather - thumbnail.webp';
-import NotesThumbanil from '../assets/images/notes - thumbnail.webp';
-import BrickBreakerThumbnail from '../assets/images/brickbreaker-thumbnail.webp';
-import PlanPalThumbnail from '../assets/images/planpal - thumbnail.webp';
 
 export const projects: Project[] = [
   {
-    img: PlanPalThumbnail,
-    title: 'PlanPal',
-    description: 'Todo list application',
-    link: 'https://lubosgarancovsky.github.io/planpal/',
-    year: '2024'
+    img: LifesimThumbanil,
+    title: 'LifeSim',
+    description: 'Ecosystem simulation',
+    link: '/v2/lifesim',
+    year: '2023'
   },
   {
     img: PathfinderThumbanil,
     title: 'Pathfinder',
     description: 'Pathfinding algorithm visualiser',
-    link: 'https://lubosgarancovsky.github.io/pathfinder/',
+    link: '/v2/pathfinder',
     year: '2023'
   },
   {
     img: LifesimThumbanil,
-    title: 'LifeSim',
-    description: 'Ecosystem simulation',
-    link: 'https://lubosgarancovsky.github.io/LifeSim/',
+    title: 'MC Manager',
+    description: 'Rust desktop application',
+    link: '/v2/mcmanager',
     year: '2023'
   },
   {
-    img: WatherThumbanil,
-    title: 'WeatherApp',
-    description: 'Weather forecast',
-    link: 'https://github.com/lubosgarancovsky/WeatherApp',
-    year: '2022'
-  },
-  {
-    img: BrickBreakerThumbnail,
-    title: 'Brick Breaker',
-    description: 'Python game',
-    link: 'https://github.com/lubosgarancovsky/BrickBreaker',
-    year: '2022'
-  },
-  {
-    img: NotesThumbanil,
-    title: 'My simple notes',
-    description: 'Android note taking application',
-    link: 'https://github.com/lubosgarancovsky/MySimpleNotes',
-    year: '2022'
+    img: LifesimThumbanil,
+    title: 'Aurora',
+    description: 'Spring boot project managment tool',
+    link: '/v2/aurora',
+    year: '2023'
   }
 ];

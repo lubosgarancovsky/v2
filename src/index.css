@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
+/* @font-face {
   font-family: 'WorkSans';
   src: url('./fonts/WorkSans-Regular.woff2') format('woff2');
   font-weight: normal;
@@ -21,13 +23,13 @@
   src: url('./fonts/WorkSans-Bold.woff2') format('woff2');
   font-weight: bold;
   font-style: normal;
-}
+} */
 
 @layer base {
   :root {
-    --background: 0deg 0% 7%;
-    --background-100: 0deg 0% 12%;
-    --background-200: 0deg 0% 16%;
+    --background: 0deg 0% 4%;
+    --background-100: 0deg 0% 9%;
+    --background-200: 0deg 0% 12%;
     --foreground: 0deg 0% 97%;
     --foreground-100: 0deg 0% 62%;
     --foreground-200: 0deg 0% 50%;
@@ -38,11 +40,23 @@
   }
 
   * {
-    font-family: 'WorkSans', sans-serif;
+    font-family: 'Inter', sans-serif;
   }
 
   body {
     @apply bg-background text-foreground;
+  }
+
+  h1 {
+    @apply text-4xl mb:text-5xl tb2:text-6xl font-bold;
+  }
+
+  h2 {
+    @apply text-2xl tb2:text-4xl font-bold;
+  }
+
+  h3 {
+    @apply text-lg tb2:text-2xl font-semibold;
   }
 
   h4 {
@@ -65,6 +79,29 @@
 
   .link {
     @apply text-blue-500 hover:text-blue-600;
+  }
+
+  .card-thumbnail {
+    @apply duration-300;
+  }
+
+  .card:hover .card-thumbnail {
+    @apply scale-110;
+  }
+
+  .icon-link:hover .icon-link__icon {
+    @apply scale-110 shadow-gradient;
+  }
+
+  .icon-link:hover .icon-link__label {
+    @apply text-foreground;
+  }
+
+  .arrow-link span {
+    @apply text-foreground-100 duration-200;
+  }
+  .arrow-link:hover span {
+    @apply text-foreground;
   }
 
   /* HTML: <div class="loader"></div> */

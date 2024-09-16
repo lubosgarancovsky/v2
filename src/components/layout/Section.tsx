@@ -17,8 +17,8 @@ const Section: React.FC<SectionProps> = ({
     <section className={className} {...props}>
       {(title || subtitle) && (
         <div className="mb-6">
-          {title && <h4>{title}</h4>}
-          {subtitle && <p className="mt-4">{subtitle}</p>}
+          {title && <h3>{title}</h3>}
+          {subtitle && <p className="mt-2 text-foreground-100">{subtitle}</p>}
         </div>
       )}
       {children}
