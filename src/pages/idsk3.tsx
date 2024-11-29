@@ -27,7 +27,7 @@ const IdskPage: React.FC = () => {
         }
         technologies={['React', 'Tailwind', 'Storybook', 'Jest']}
         prev={{ href: '/moje-slovensko', title: 'Moje Slovensko' }}
-        next={{ href: '/lifesim', title: 'LifeSim' }}
+        next={{ href: '/dome', title: 'Dome' }}
         href="https://github.com/id-sk/esvk_web_lib_idsk3_react"
       >
         <Section title="Features">

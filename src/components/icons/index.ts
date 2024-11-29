@@ -30,3 +30,6 @@ export { default as Json } from './Json';
 export { default as Filter } from './Filter';
 export { default as Database } from './Database';
 export { default as Home } from './Home';
+export { default as Lock } from './Lock';
+export { default as Console } from './Console';
+export { default as Binary } from './Binary';

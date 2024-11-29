@@ -23,8 +23,8 @@ const LifesimPage: React.FC = () => {
         thumbnail={LifesimThumbnail}
         technologies={['Typescript', 'HTML', 'CSS']}
         prev={{
-          title: 'ID-SK 3',
-          href: '/idsk3'
+          title: 'Dome',
+          href: '/dome'
         }}
         next={{
           title: 'Pathfinder',

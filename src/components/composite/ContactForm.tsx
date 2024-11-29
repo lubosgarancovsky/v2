@@ -2,9 +2,7 @@ import React, { useRef } from 'react';
 import { useContactForm } from './useContactForm';
 import { cn } from '../../utils';
 
-interface ContactFormProps {}
-
-const ContactForm: React.FC<ContactFormProps> = ({}) => {
+const ContactForm: React.FC = () => {
   const formRef = useRef<HTMLFormElement>(null);
   const { send, state } = useContactForm(formRef);
 

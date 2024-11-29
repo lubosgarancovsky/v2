@@ -19,6 +19,7 @@ import {
 } from '../components';
 
 import SkitLogo from '../assets/images/skit - logo.webp';
+import PlaceholderLogo from '../assets/images/placeholder.png';
 import { useRef } from 'react';
 
 function Homepage() {
@@ -107,24 +108,39 @@ function Homepage() {
       </Section> */}
 
       <Section title="Experience">
-        <a
-          className="flex items-center gap-4"
-          target="_blank"
-          href="https://slovenskoit.sk/"
-        >
-          <div className="rounded-full overflow-hidden w-16">
-            <img src={SkitLogo} alt="skit - logo" width={64} height={64} />
+        <div className="flex flex-col gap-4">
+          <div className="flex items-center gap-4">
+            <div className="rounded-full overflow-hidden w-16 flex-shrink-0">
+              <img
+                src={PlaceholderLogo}
+                alt="DiTeSo s.r.o. - logo"
+                width={64}
+                height={64}
+              />
+            </div>
+            <div className="flex flex-col w-full">
+              <span>Software engineer</span>
+              <span className="text-foreground-200">DiTeSo s.r.o.</span>
+            </div>
+            <p className="text-foreground-200 text-nowrap tb2:text-base text-sm">
+              2024 - Present
+            </p>
           </div>
-          <div className="flex flex-col w-full">
-            <span>Frontend engineer</span>
-            <span className="text-foreground-200">Slovensko IT a.s.</span>
+          <div className="flex items-center gap-4">
+            <div className="rounded-full overflow-hidden w-16 flex-shrink-0">
+              <img src={SkitLogo} alt="skit - logo" width={64} height={64} />
+            </div>
+            <div className="flex flex-col w-full">
+              <span>Software engineer</span>
+              <span className="text-foreground-200">Slovensko IT a.s.</span>
+            </div>
+            <p className="text-foreground-200 text-nowrap tb2:text-base text-sm">
+              2022 - 2024
+            </p>
           </div>
-          <p className="text-foreground-200 text-nowrap">2022 - 2024</p>
-        </a>
+        </div>
       </Section>
-      <Section
-        title="Contact"
-      >
+      <Section title="Contact">
         <ContactForm />
       </Section>
     </Layout>

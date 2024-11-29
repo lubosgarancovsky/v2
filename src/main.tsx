@@ -12,6 +12,7 @@ import { ReactLenis } from '@studio-freight/react-lenis';
 import IdskPage from './pages/idsk3.tsx';
 import PathfinderPage from './pages/pathfinder.tsx';
 import LifesimPage from './pages/lifesim.tsx';
+import DomePage from './pages/dome.tsx';
 
 const base = '/v2';
 
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
   {
     path: base + '/pathfinder',
     element: <PathfinderPage />
+  },
+  {
+    path: base + '/dome',
+    element: <DomePage />
   }
 ]);
 

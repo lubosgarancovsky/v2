@@ -6,6 +6,13 @@ import LifesimThumbanil from '../assets/images/lifesim - thumbnail.webp';
 export const projects: Project[] = [
   {
     img: LifesimThumbanil,
+    title: 'Dome',
+    description: 'CLI password manager',
+    link: '/v2/dome',
+    year: '2024'
+  },
+  {
+    img: LifesimThumbanil,
     title: 'LifeSim',
     description: 'Ecosystem simulation',
     link: '/v2/lifesim',
